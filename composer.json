@@ -1,14 +1,13 @@
 {
-    "name": "slim/slim-skeleton",
-    "description": "A Slim Framework skeleton application for rapid development",
-    "keywords": ["microframework", "rest", "router", "psr7"],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "name": "HosseinXeinali/simple-api-with-slim-framework",
+    "description": "a simple api implemented by slim framework",
+    "keywords": ["api"],
+    "homepage": "https://github.com/HosseinXeinali/simple-api-with-slim-framework",
     "license": "MIT",
     "authors": [
         {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
+            "name": "Hossein Zeinali",
+            "email": "hosseinzeinalii@gmail.com"
         }
     ],
     "require": {
