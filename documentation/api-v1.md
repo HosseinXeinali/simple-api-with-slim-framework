@@ -3,23 +3,11 @@
   Calling this api url, you will create a new product.
 * **URL**
 
-  http:localhost/api/v1/products
+  /api/v1/products
 
 * **Method:**
   
   `POST`
-  
-*  **URL Params**
-
-   <_If URL params exist, specify them in accordance with name mentioned in URL section. Separate into optional and required. Document data constraints._> 
-
-   **Required:**
- 
-   `id=[integer]`
-
-   **Optional:**
- 
-   `photo_id=[alphanumeric]`
 
 * **Data Params**
 
@@ -32,27 +20,119 @@
 
 * **Success Response:**
   
-  <_What should the status code be on success and is there any returned data? This is useful when people need to to know what their callbacks should expect!_>
-
-  * **Code:** 200 <br />
-    **Content:** `{ id : 12 }`
+  * **Code:** 201 <br />
+    **Content:** `{ message : The item was created successfully }`
  
 * **Error Response:**
 
-  <_Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be._>
-
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "Log in" }`
-
+  * **Code:** 401 <br />
+    **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
+  
   OR
 
-  * **Code:** 422 UNPROCESSABLE ENTRY <br />
-    **Content:** `{ error : "Email Invalid" }`
+  * **Code:** 400 <br />
+    **Content:** `{ message : "Validation errors in your request",
+     "errors": {
+                 "price": [
+                       "The price should be a positive int or decimal."
+                        ...
+                     ]
+                 ...
+                } 
+             }`
+  
+  OR
+  
+  * **Code:** 400 <br />
+      **Content:** `{ message : "unknown database error in your request"}`
 
-* **Sample Call:**
+**Update a product**
+----
+  Calling this api url, you will update a  product.
+* **URL**
 
-  <_Just a sample call to your endpoint in a runnable format ($.ajax call or a curl request) - this makes life easier and more predictable._> 
+  /api/v1/products/{id}
 
-* **Notes:**
+* **Method:**
+  
+  `PUT`
 
-  <_This is where all uncertainties, commentary, discussion etc. can go. I recommend timestamping and identifying oneself when leaving comments here._> 
+*  **URL Params**
+
+   <_If URL params exist, specify them in accordance with name mentioned in URL section. Separate into optional and required. Document data constraints._> 
+
+   **Required:**
+ 
+   `id=[integer]`
+
+* **Data Params**
+
+  None
+
+
+* **Success Response:**
+  
+  * **Code:** 200 <br />
+    **Content:** `{ product : {name: iPhone, price: 900} }`
+ 
+* **Error Response:**
+
+  * **Code:** 401 <br />
+    **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
+  
+  OR
+
+  * **Code:** 400 <br />
+    **Content:** `{ message : "Validation errors in your request",
+     "errors": {
+                 "price": [
+                       "The price should be a positive int or decimal."
+                        ...
+                     ]
+                 ...
+                } 
+             }`
+  
+  OR
+  
+  * **Code:** 400 <br />
+      **Content:** `{ message : "unknown database error in your request"}`
+
+**Delete a product**
+----
+  Calling this api url, you will delete a  product.
+* **URL**
+
+  /api/v1/delete/{id}
+
+* **Method:**
+  
+  `Delete`
+
+*  **URL Params**
+
+   <_If URL params exist, specify them in accordance with name mentioned in URL section. Separate into optional and required. Document data constraints._> 
+
+   **Required:**
+ 
+   `id=[integer]`
+
+* **Data Params**
+
+  None
+
+
+* **Success Response:**
+  
+  * **Code:** 200 <br />
+    **Content:** `{ product : {name: iPhone, price: 900} }`
+ 
+* **Error Response:**
+
+  * **Code:** 401 <br />
+    **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
+   
+  OR
+    
+    * **Code:** 404 <br />
+        **Content:** `{ message : "The item does not exist."}`
