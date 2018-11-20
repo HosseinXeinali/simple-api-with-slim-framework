@@ -1,4 +1,6 @@
-**Create a product**
+***[Product create](#product-create)***
+
+# <a name="product-create"></a> **Create a product**
 ----
   Calling this api url, you will create a new product.
 * **URL**
