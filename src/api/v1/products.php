@@ -146,8 +146,8 @@ $app->group('/api', function () use ($app) {
 
     })
         ->add(function (Request $request, Response $response, $next) {
-            $usename = $_SERVER['PHP_AUTH_USER'];
-            $password = $_SERVER['PHP_AUTH_PW'];
+            (isset($_SERVER['PHP_AUTH_USER'])) ? $usename = $_SERVER['PHP_AUTH_USER'] : $usename = '';
+            (isset($_SERVER['PHP_AUTH_PW'])) ? $password = $_SERVER['PHP_AUTH_PW'] : $password = '';
             $cond = 'username = "' . $usename . '" and password = "' . md5($password) . '" ';
             $client = (new App\Model\Client)->whereRaw($cond)->first();
             if ($client) {
