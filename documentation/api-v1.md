@@ -1,5 +1,17 @@
 ***[Product create](#product-create)***
 
+***[Product update](#product-update)***
+
+***[Product delete](#product-delete)***
+
+***[sync all](#sync-all)***
+
+***[sync create](#sync-create)***
+
+***[sync update](#sync-update)***
+
+***[sync delete](#sync-delete)***
+
 # <a name="product-create"></a> **Create a product**
 ----
   Calling this api url, you will create a new product.
@@ -48,7 +60,7 @@
   * **Code:** 400 <br />
       **Content:** `{ message : "unknown database error in your request"}`
 
-**Update a product**
+# <a name="product-update"></a> **Update a product**
 ----
   Calling this api url, you will update a  product.
 * **URL**
@@ -98,7 +110,7 @@
   * **Code:** 400 <br />
       **Content:** `{ message : "unknown database error in your request"}`
 
-**Delete a product**
+# <a name="product-delete"></a> **Delete a product**
 ----
   Calling this api url, you will delete a  product.
 * **URL**
@@ -135,7 +147,7 @@
     * **Code:** 404 <br />
         **Content:** `{ message : "The item does not exist."}`
 
-**Sync (created, updated, deleted) products**
+# <a name="sync-all"></a> **Sync (created, updated, deleted) products**
 ----
   Calling this api url, you will get a list of (created, updated, deleted) that should be synced.
 * **URL**
@@ -174,7 +186,7 @@
   * **Code:** 401 <br />
     **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
   
-**Sync created products**
+# <a name="sync-create"></a> **Sync created products**
 ----
   Calling this api url, you will get a list of (created, updated, deleted) that should be synced.
 * **URL**
@@ -213,7 +225,7 @@
   * **Code:** 401 <br />
     **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
   
-**Sync updated products**
+# <a name="sync-update"></a> **Sync updated products**
 ----
   Calling this api url, you will get a list of (created, updated, deleted) that should be synced.
 * **URL**
@@ -252,7 +264,7 @@
   * **Code:** 401 <br />
     **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
   
-**Sync deleted products**
+# <a name="sync-delete"></a> **Sync deleted products**
 ----
   Calling this api url, you will get a list of (created, updated, deleted) that should be synced.
 * **URL**
