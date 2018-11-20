@@ -132,3 +132,160 @@
     
     * **Code:** 404 <br />
         **Content:** `{ message : "The item does not exist."}`
+
+**Sync (created, updated, deleted) products**
+----
+  Calling this api url, you will get a list of (created, updated, deleted) that should be synced.
+* **URL**
+
+  /api/v1/sync/all
+
+* **Method:**
+  
+  `GET`
+
+* **Success Response:**
+  
+  * **Code:** 202 <br />
+    **Content:** `[
+                      {
+                          "id": 36,
+                          "type": "create",
+                          "time": 1542721593,
+                          "updated_at": "2018-11-20 17:16:33",
+                          "created_at": "2018-11-20 17:16:33",
+                          "product_id": 56
+                      },
+                      {
+                          "id": 37,
+                          "type": "update",
+                          "time": 1542721594,
+                          "updated_at": "2018-11-20 17:16:34",
+                          "created_at": "2018-11-20 17:16:34",
+                          "product_id": 57
+                      },
+                      ...
+                  ]`
+ 
+* **Error Response:**
+
+  * **Code:** 401 <br />
+    **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
+  
+**Sync created products**
+----
+  Calling this api url, you will get a list of (created, updated, deleted) that should be synced.
+* **URL**
+
+  /api/v1/sync/create
+
+* **Method:**
+  
+  `GET`
+
+* **Success Response:**
+  
+  * **Code:** 202 <br />
+    **Content:** `[
+                      {
+                          "id": 36,
+                          "type": "create",
+                          "time": 1542721593,
+                          "updated_at": "2018-11-20 17:16:33",
+                          "created_at": "2018-11-20 17:16:33",
+                          "product_id": 56
+                      },
+                      {
+                          "id": 37,
+                          "type": "create",
+                          "time": 1542721594,
+                          "updated_at": "2018-11-20 17:16:34",
+                          "created_at": "2018-11-20 17:16:34",
+                          "product_id": 57
+                      },
+                      ...
+                  ]`
+ 
+* **Error Response:**
+
+  * **Code:** 401 <br />
+    **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
+  
+**Sync updated products**
+----
+  Calling this api url, you will get a list of (created, updated, deleted) that should be synced.
+* **URL**
+
+  /api/v1/sync/update
+
+* **Method:**
+  
+  `GET`
+
+* **Success Response:**
+  
+  * **Code:** 202 <br />
+    **Content:** `[
+                      {
+                          "id": 36,
+                          "type": "update",
+                          "time": 1542721593,
+                          "updated_at": "2018-11-20 17:16:33",
+                          "created_at": "2018-11-20 17:16:33",
+                          "product_id": 56
+                      },
+                      {
+                          "id": 37,
+                          "type": "update",
+                          "time": 1542721594,
+                          "updated_at": "2018-11-20 17:16:34",
+                          "created_at": "2018-11-20 17:16:34",
+                          "product_id": 57
+                      },
+                      ...
+                  ]`
+ 
+* **Error Response:**
+
+  * **Code:** 401 <br />
+    **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
+  
+**Sync deleted products**
+----
+  Calling this api url, you will get a list of (created, updated, deleted) that should be synced.
+* **URL**
+
+  /api/v1/sync/delete
+
+* **Method:**
+  
+  `GET`
+
+* **Success Response:**
+  
+  * **Code:** 202 <br />
+    **Content:** `[
+                      {
+                          "id": 36,
+                          "type": "delete",
+                          "time": 1542721593,
+                          "updated_at": "2018-11-20 17:16:33",
+                          "created_at": "2018-11-20 17:16:33",
+                          "product_id": 56
+                      },
+                      {
+                          "id": 37,
+                          "type": "delete",
+                          "time": 1542721594,
+                          "updated_at": "2018-11-20 17:16:34",
+                          "created_at": "2018-11-20 17:16:34",
+                          "product_id": 57
+                      },
+                      ...
+                  ]`
+ 
+* **Error Response:**
+
+  * **Code:** 401 <br />
+    **Content:** `{ message : "Authentication credentials were missing or incorrect" }`
+  
