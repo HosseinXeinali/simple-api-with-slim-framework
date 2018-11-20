@@ -14,6 +14,7 @@ $app->group('/api', function () use ($app) {
             $client = new \App\Model\Client();
             $client->username = $allPostPutVars['username'];
             $client->password = md5($allPostPutVars['password']);
+            $client->sync_time = time();
             try {
                 if ($client->save()) {
                     return $response->withJson($client);
