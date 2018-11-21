@@ -1,6 +1,6 @@
 **Requirements**
 ----
-* PHP 5.6
+* PHP 5.6 or higher
 * MySQL 
 * cURL
 * Ability to write htaccess file for apache mod_rewrite
