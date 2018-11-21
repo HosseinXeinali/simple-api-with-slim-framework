@@ -1,12 +1,3 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^(www\.)?(podineh.com|cdn.podineh.com)$
-RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteRule ^$ public/     [L]
