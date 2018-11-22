@@ -20,6 +20,6 @@
 
 **Sql Description**
 ----
-* [sql description](./documentation/sql-description.md)
+* [sql schema description](./documentation/sql-description.md)
 
 
