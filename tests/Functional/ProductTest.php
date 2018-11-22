@@ -13,7 +13,7 @@ class ProductTest extends BaseTestCase
     {
         $client = new Client();
 
-        $response = $client->request('POST', 'http://localhost/simple-api-with-slim-framework/public/api/v1/products', [
+        $response = $client->request('POST', 'http://localhost:8080/simple-api-with-slim-framework/public/api/v1/products', [
             'auth' => ['hossein', 'hossein'],
             'form_params' => [
                 'name' => 'iPhone',
